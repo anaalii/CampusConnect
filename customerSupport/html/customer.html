@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head style="background-color: #f1f1f1;"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+    <title>CampusConnect</title>
+
+    <link rel="stylesheet" href="../assets/css/maicons.css">
+
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+
+    <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <style>
+        .centered-text {
+           display: flex;
+           justify-content: center; 
+           align-items: center;
+           height: 300px;
+           border: 1px solid #ccc;
+           background-color: #0c0c0c;
+           background-image: url("bk.jpeg");
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+        
+        .button {
+            background-color: #ffffff;
+            font-size: medium; 
+            width: 7cm; 
+            border: 2px solid #00D9A5;    
+            padding: 10px;
+            border-radius: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .form {
+            background-color: #ffffff;
+            font-size: medium; 
+            color: #0c0c0c;
+            width: 7cm; 
+            border: 2px solid #00D9A5;    
+            padding: 10px;
+            border-radius: 25px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .formbackground {
+          background-color: transparent;
+          border-radius: 2px solid;
+          width: 15cm;
+          height: 15cm;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:  rgb(255, 255, 255);">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+            <div class="container">
+              <a class="navbar-brand" href="#"><span class="text-primary">College</span>Info<span class="text-primary">Center</span></a>
+      
+              <div class="collapse navbar-collapse" id="navbarSupport">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="team.html">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div> <!-- .navbar-collapse -->
+            </div> <!-- .container -->
+          </nav>
+
+          <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bk.jpeg); height: 25cm;">
+            <div class="banner-section">
+              <div class="container text-center wow fadeInUp">     
+          
+                <p><h1 class="text-center wow fadeInUp">CUSTOMER SUPPORT</h1></p>
+                      
+                      <div style="font-size: 20px;">
+                        <P>
+                           <i>UNIT RESIDENSI DAN HOSPITALITI PELAJAR (URHP) UiTM CAWANGAN SABAH</i>
+                        </P>
+                      </div> 
+
+                      <form class="main-form formbackground" method="post" action="/CampusConnect/customerSupport/php/response.php" >
+                        <div class="row mt-5 ">
+                          <!--FULL NAME-->
+                          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" name="fullName">
+                            <input type="fullName" class="form-control" placeholder="Full Name" name="fullName" value="">
+                          </div>
+                          <!--EMAIL-->
+                          <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+                            <input type="text" class="form-control" placeholder="Email address.." name="email" value="">
+                          </div>
+                          <!--DATE-->
+                          <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+                            <input type="date" class="form-control" name="date" value="dd/mm/yyyy">
+                          </div>
+                          <!--TYPE OF USER-->
+                          <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+                            <select name="typeOfUser" id="typeOfUser" class="custom-select" value="Students,Parents,Contractor,Visitors>
+                              <option value="None">-</option>
+                              <option value="Students">Students</option>
+                              <option value="Parents">Parents</option>
+                              <option value="Contractor">Contractor</option>
+                              <option value="Visitors">Visitors</option>
+                            </select>
+                          </div>
+                          <!--PURPOSE-->
+                          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+                            <select name="purpose" id="purpose" class="custom-select" 
+                            value="Facility Damage Complaints,Meeting URHP Staff,Borrow Duplicate Keys,Register Electrical Items,Form Submission">
+                                <option value="complaints">-</option>
+                                <option value="complaints">Facility Damage Complaints</option>
+                                <option value="meeting">Meeting URHP Staff</option>
+                                <option value="keys">Borrow Duplicate Keys</option>
+                                <option value="electrical">Register Electrical Items</option>
+                                <option value="form">Form Submission</option>
+                              </select>
+                          </div>
+                          <!--MESSAGE-->
+                          <div class="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+                            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Leave a message.." value=""></textarea>
+                          </div>
+
+                          <a class="nav-link" href="thankyou.html"><button type="submit" name="submit" class="btn btn-primary mt-3 wow zoomIn" style="background-color: #00D9A5;">Submit Response</button></a>
+                          
+                        </div>
+                      </form>
+                                           
+                      
+                </div> <!-- .container -->
+              </div> <!-- .page-section -->
+          </div> <!-- .page-banner -->
+    <div>
+
+  <!-- footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row px-md-3">
+
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Company</h5>
+          <ul class="footer-menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Team</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>More</h5>
+          <ul class="footer-menu">
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Contact</h5>
+          <p class="footer-link mt-2">Universiti Teknologi MARA (UiTM) Cawangan Sabah
+            Kampus Kota Kinabalu
+            Beg Berkunci 71,
+            88997 Kota Kinabalu, Sabah, MALAYSIA.</p>
+          <a href="#" class="footer-link">+6088 - 325151</a>
+          <a href="#" class="footer-link">korporatsabah@uitm.edu.my</a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Social Media</h5>
+          <div class="footer-sosmed mt-3">
+            <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <p id="copyright">Copyright &copy; 2023 <a href="" target="_blank">Team Muizz</a>. All right reserved</p>
+      <!-- <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p> -->
+    </div>
+  </footer>
+        
+        
+</body>
+</html>
