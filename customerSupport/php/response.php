@@ -11,6 +11,7 @@ $dbname = "collegeregistration";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
 // Get form data
 $fullName = $_POST["fullName"];
 $email = $_POST["email"];
